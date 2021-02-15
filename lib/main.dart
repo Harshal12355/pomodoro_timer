@@ -146,19 +146,18 @@ class _PomodoroState extends State<Pomodoro> {
                   children: [
                     _button(title: "Start", onPressed: () => _controller.start()),
                     _button(title: "Pause", onPressed: () => _controller.pause()),
-                    _button(title: "Resume", onPressed: () => _controller.resume()),
                   ],
                 ),
               ),
-              // Container(
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //     children: [
-              //       _button(title: "Resume", onPressed: () => _controller.resume()),
-              //       _button(title: "Restart", onPressed: () => _controller.restart(duration: TimeSec))
-              //     ],
-              //   ),
-              // ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _button(title: "Resume", onPressed: () => _controller.resume()),
+                    _button(title: "Restart", onPressed: () => _controller.restart(duration: TimeSec))
+                  ],
+                ),
+              ),
             ],
           ),
         ),
