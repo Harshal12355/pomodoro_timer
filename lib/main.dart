@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'Short_Break.dart';
+import 'Long_Break.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,21 +44,27 @@ class _PomodoroState extends State<Pomodoro> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    FlatButton(
-                        onPressed: () {
-                          print("Pomodoro");
-                        },
-                        child: Text("Pomodoro"),
-                    ),
+                    // FlatButton(
+                    //     onPressed: () {
+                    //       print("Pomodoro");
+                    //     },
+                    //     child: Text("Pomodoro"),
+                    // ),
                     FlatButton(
                       onPressed: () {
-                        print("Short Break");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SPage()),
+                        );
                       },
                       child: Text("Short Break"),
                     ),
                     FlatButton(
                       onPressed: () {
-                        print("Long Break");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LPage()),
+                        );
                       },
                       child: Text("Long Break"),
                     ),
