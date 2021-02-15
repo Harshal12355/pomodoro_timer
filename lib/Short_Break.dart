@@ -18,8 +18,10 @@ class _SPageState extends State<SPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[700],
       appBar: AppBar(
         title: Text("Short Break"),
+        backgroundColor: Colors.red[900],
       ),
       body: Column(
         children: [

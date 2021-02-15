@@ -18,8 +18,10 @@ class _LPageState extends State<LPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[700],
       appBar: AppBar(
         title: Text("Long Break"),
+        backgroundColor: Colors.red[900],
       ),
       body: Column(
         children: [

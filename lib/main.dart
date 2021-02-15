@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pomodoro Timer',
+      debugShowCheckedModeBanner: false,
       home: Pomodoro(),
     );
   }
@@ -36,8 +37,12 @@ class _PomodoroState extends State<Pomodoro> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.grey[700],
           appBar: AppBar(
-            title: Text("Pomodoro Timer"),
+            title: Center(
+                child: Text("Pomodoro Timer")
+            ),
+            backgroundColor: Colors.red[900],
           ),
           body: Column(
             children: <Widget>[
@@ -46,23 +51,31 @@ class _PomodoroState extends State<Pomodoro> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    FlatButton(
+                    RaisedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => SPage()),
                         );
                       },
-                      child: Text("Short Break"),
+                      child: Text(
+                          "Short Break",
+                          style: TextStyle(color: Colors.white),
+                      ),
+                      color: Colors.black,
                     ),
-                    FlatButton(
+                    RaisedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => LPage()),
                         );
                       },
-                      child: Text("Long Break"),
+                      child: Text(
+                          "Long Break",
+                          style: TextStyle(color: Colors.white),
+                      ),
+                      color: Colors.black,
                     ),
                   ]
                 ),
